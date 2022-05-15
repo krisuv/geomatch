@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+@mixin centerEarth {
+  top: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.homepage{
+  height: 100vh;
+  background: $spaceBackgroundPrimary;
+  color: white;
+  padding-inline: 46px;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.welcome-text,
+.short-info{
+  position: relative;
+  z-index: 100;
+}
+
+.welcome-text{
+  &__header {
+    font-size: $h1Size;
+    position: relative;
+    left: -.5rem;
+    top: .5rem;
+  }
+
+  &__span {
+    &--geo {
+      color: $primary;
+    }
+    &--match {
+      color: $light;
+    }
+  }
+}
+
+.planet-image{
+  width: clamp(260px, 60vw ,600px);
+  position: absolute;
+  @include centerEarth();
+}

@@ -1,0 +1,79 @@
+@import "./variables.scss";
+@import "./homepage.scss";
+
+@font-face {
+  //Free download fonts at http://sharefonts.net
+  font-family: 'rockwell';
+  src: url(fonts/rockb.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-inline: auto;
+}
+
+@mixin centerText {
+  text-align: center;
+  margin-inline: auto;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background: $spaceBackgroundSecondary;
+  color: $light;
+  position: relative;
+  font-family: 'montserrat',sans-serif;
+
+  &::before{
+    content: '';
+    background: url('img/space-Timrael-pixabay.jpg');
+    object-fit: cover;
+    opacity: .1;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    z-index: 10;
+  }
+}
+
+h1,
+h2 {
+  font-family: Rockwell, serif;
+  color: $primary;
+  letter-spacing: -0.075em;
+  @include centerText();
+}
+
+h2 {
+  font-size: $h2Size;
+}
+
+.about-quiz{
+  //background: $spaceBackgroundSecondary;
+}
+
+.footer{
+  background-color: $primary;
+}
