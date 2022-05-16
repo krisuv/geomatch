@@ -27,7 +27,7 @@
 }
 
 .planet-image {
-  width: clamp(260px, 60vw, 600px);
+  width: clamp(260px, 60vw ,600px);
   position: absolute;
   top: 46px;
   left: 50%;
