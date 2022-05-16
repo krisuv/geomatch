@@ -13,6 +13,49 @@ $shortInfoMargin: 1.5rem;
 $shortInfoLineHeight: 1.5rem;
 
 $buttonBackground: linear-gradient(135deg, $secondary 0%, $third 100%);
+$checkedAnswer: linear-gradient(140deg, rgba(177,224,25,0.9) 0%, rgba(27,230,197,0.3) 100%);
 $buttonShadow: rgb(96, 68, 11);
 
 $playButtonMargin: 1.5rem;
+
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-inline: auto;
+}
+
+@mixin centerText($textCenter: center, $marginInline: auto) {
+  text-align: $textCenter;
+  margin-inline: $marginInline;
+}
+
+@mixin centerEarth {
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centerEarthBig {
+  top: 30px;
+  left: 80%;
+}
+
+@mixin stars {
+  content: '';
+  background: url('img/stars.png');
+  object-fit: cover;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
+}

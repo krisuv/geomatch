@@ -2,6 +2,8 @@
 @import "./homepage.scss";
 @import "./sections.scss";
 @import "./footer.scss";
+@import "./quiz.scss";
+@import "./result.scss";
 
 @font-face {
   //Free download fonts at http://sharefonts.net
@@ -9,24 +11,6 @@
   src: url(fonts/rockb.ttf);
   font-style: normal;
   font-weight: 700;
-}
-
-@mixin flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  margin-inline: auto;
-}
-
-@mixin centerText {
-  text-align: center;
-  margin-inline: auto;
 }
 
 *,
@@ -50,10 +34,17 @@ body {
 }
 
 .homepage,
-.about-quiz {
-  padding-inline: 3rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.about-quiz,
+.about-me {
+  padding: 1.5rem 2.2rem;
+}
+
+.about-me {
+  margin-bottom: 2rem;
+}
+
+.about-quiz{
+  margin-top: 1rem;
 }
 
 h1,
@@ -87,17 +78,62 @@ h3 {
   color: white;
 
   &--play{
-    margin-top:$playButtonMargin;
+    margin:$playButtonMargin auto;
     display: block;
-    margin-inline: auto;
   }
 
 }
 
-.about-quiz{
-  //background: $spaceBackgroundSecondary;
+@media all and (max-width: 350px) {
+  html{
+    font-size: 13px;
+  }
 }
 
-.footer{
-  background-color: $primary;
+@media all and (min-width: 800px){
+  html{
+    font-size: 10px;
+  }
+  .planet-image{
+    @include centerEarthBig();
+  }
+
+  .button--play {
+    margin-inline: 0;
+    position: relative;
+    top: 22rem;
+  }
+
+  .welcome-text__header{
+    text-align: left;
+    font-size: 6rem;
+  }
+  .welcome-text__subheading{
+    margin-top: 3rem;
+    text-align: left;
+  }
+  .short-info{
+    max-width: 50vw;
+  }
+
+  .footer__socials,
+  .footer__copyright{
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .homepage {
+    padding-inline: 6rem;
+  }
+
+  .about-quiz,
+  .about-me {
+    padding-inline: 25vw;
+  }
+
+  h1,
+  h2 {;
+    @include centerText(left,0);
+  }
+
 }

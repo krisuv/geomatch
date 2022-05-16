@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+.quiz{
+  min-height: 100vh;
+  padding: 2.4rem 2.2rem;
+
+  //&::before{
+  //  @include stars();
+  //  z-index: -1;
+  //}
+}
+
+.welcome-text {
+  &__header{
+    &--quiz-header{
+      position: static;
+    }
+  }
+  &__subheading{
+    &--quiz-subheading{
+      margin-top: 2rem;
+    }
+  }
+}
+
+.question {
+  //margin-top: 3rem;
+  position: relative;
+  margin: 3rem auto 1rem;
+  //text-align: center;
+  max-width: 287px;
+  min-height: 189px;
+  background: radial-gradient(100% 100% at 24.22% 0%, rgba(163, 177, 236, 0.7) 0%, rgba(163, 177, 236, 0.1) 100%);
+  border: 1px solid rgba(163, 177, 236, 0.3);
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  padding: 24px;
+
+  &__icon{
+    position: absolute;
+    font-size: 2rem;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title{
+    text-align: center;
+    padding-bottom: 1.2rem;
+  }
+
+  &__option{
+    display: none;
+  }
+  &__answers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+  }
+  &__label{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .8rem;
+    border-radius: 5px;
+    padding: .3rem .8rem;
+    background:$buttonBackground;
+    color: black;
+    box-shadow: 0px 4px 4px $buttonShadow;
+    max-width: 100px;
+    min-height: 25px;
+    word-wrap: break-word;
+    //@include flexbox();
+  }
+  &__label:checked{
+    //outline: 3px solid red;
+  }
+
+  input[type=radio]:checked + .question__label{
+    background:$checkedAnswer;
+    box-shadow: none;
+    transform: scale(1.03);
+    //outline: 2px solid $primary;
+  }
+
+}
+
+//#first{
+//  margin-top: 3rem;
+//}

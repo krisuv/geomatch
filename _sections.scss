@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 section {
-  line-height: 1.3rem;
+  line-height: 1.6rem;
   .about-quiz {
     &__list {
       list-style-position: inside;
@@ -13,7 +13,8 @@ section {
     }
   }
   .about-me{
-    padding-inline: 2rem;
+    //padding-inline: 2rem;
+    //margin-bottom: 2rem;
     &__info {
       //text-align: justify;
 

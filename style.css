@@ -1,27 +1,15 @@
 .homepage {
-  height: 100vh;
-  background: linear-gradient(116.82deg, #07111A 0%, #0C154A 77.12%, #0F1C68 100%);
+  min-height: 100vh;
+  background: url("img/spaceStars.png");
+  object-fit: cover;
   color: white;
   position: relative;
-}
-.homepage::before {
-  content: "";
-  background: url("img/stars.png");
-  object-fit: cover;
-  opacity: 0.25;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform: scaleX(-1);
-  z-index: 5;
 }
 
 .welcome-text,
 .short-info {
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 
 .welcome-text__header {
@@ -52,16 +40,16 @@
 }
 
 .planet-image {
-  width: clamp(260px, 60vw ,600px);
+  width: clamp(260px, 35vw ,400px);
   position: absolute;
   top: 36px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 0;
 }
 
 section {
-  line-height: 1.3rem;
+  line-height: 1.6rem;
 }
 section .about-quiz__list {
   list-style-position: inside;
@@ -70,9 +58,6 @@ section .about-quiz__list {
 section .about-quiz__paragraph {
   padding-top: 0.8rem;
   text-align: justify;
-}
-section .about-me {
-  padding-inline: 2rem;
 }
 section .about-me__info--more-info {
   font-weight: 500;
@@ -90,6 +75,7 @@ section .about-me__info--more-info .python {
 
 .footer {
   padding: 0.5rem 2rem;
+  background-color: #e5c12d;
 }
 .footer__copyright {
   font-weight: 700;
@@ -100,6 +86,74 @@ section .about-me__info--more-info .python {
 .footer__link {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.quiz {
+  min-height: 100vh;
+  padding: 2.4rem 2.2rem;
+}
+
+.welcome-text__header--quiz-header {
+  position: static;
+}
+.welcome-text__subheading--quiz-subheading {
+  margin-top: 2rem;
+}
+
+.question {
+  position: relative;
+  margin: 3rem auto 1rem;
+  max-width: 287px;
+  min-height: 189px;
+  background: radial-gradient(100% 100% at 24.22% 0%, rgba(163, 177, 236, 0.7) 0%, rgba(163, 177, 236, 0.1) 100%);
+  border: 1px solid rgba(163, 177, 236, 0.3);
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  padding: 24px;
+}
+.question__icon {
+  position: absolute;
+  font-size: 2rem;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.question__title {
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+.question__option {
+  display: none;
+}
+.question__answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.2rem;
+}
+.question__label {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem;
+  background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
+  color: black;
+  box-shadow: 0px 4px 4px #60440b;
+  max-width: 100px;
+  min-height: 25px;
+  word-wrap: break-word;
+}
+.question input[type=radio]:checked + .question__label {
+  background: linear-gradient(140deg, rgba(177, 224, 25, 0.9) 0%, rgba(27, 230, 197, 0.3) 100%);
+  box-shadow: none;
+  transform: scale(1.03);
+}
+
+.result {
+  margin-top: 4rem;
+}
+.result__info {
+  text-align: center;
 }
 
 @font-face {
@@ -129,10 +183,17 @@ body {
 }
 
 .homepage,
+.about-quiz,
+.about-me {
+  padding: 1.5rem 2.2rem;
+}
+
+.about-me {
+  margin-bottom: 2rem;
+}
+
 .about-quiz {
-  padding-inline: 3rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 h1,
@@ -166,13 +227,65 @@ h3 {
   color: white;
 }
 .button--play {
-  margin-top: 1.5rem;
+  margin: 1.5rem auto;
   display: block;
-  margin-inline: auto;
 }
 
-.footer {
-  background-color: #e5c12d;
+@media all and (max-width: 350px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media all and (min-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+
+  .planet-image {
+    top: 30px;
+    left: 80%;
+  }
+
+  .button--play {
+    margin-inline: 0;
+    position: relative;
+    top: 22rem;
+  }
+
+  .welcome-text__header {
+    text-align: left;
+    font-size: 6rem;
+  }
+
+  .welcome-text__subheading {
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .short-info {
+    max-width: 50vw;
+  }
+
+  .footer__socials,
+.footer__copyright {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .homepage {
+    padding-inline: 6rem;
+  }
+
+  .about-quiz,
+.about-me {
+    padding-inline: 25vw;
+  }
+
+  h1,
+h2 {
+    text-align: left;
+    margin-inline: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
