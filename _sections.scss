@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+section {
+  line-height: 1.3rem;
+  .about-quiz {
+    &__list {
+      list-style-position: inside;
+      line-height: 170%;
+    }
+    &__paragraph{
+      padding-top: .8rem;
+      text-align: justify;
+    }
+  }
+  .about-me{
+    padding-inline: 2rem;
+    &__info {
+      //text-align: justify;
+
+      &--more-info{
+        font-weight: 500;
+        text-align: left;
+        margin-top: .5rem;
+
+        .csharp{
+          color: green;
+          font-weight: 600;
+        }
+        .python{
+          color:royalblue;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

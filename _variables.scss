@@ -1,6 +1,18 @@
-$primary: #E3C639;
+$primary: #e5c12d;
+$secondary: rgb(229,193,45);
+$third: rgb(230,122,27);
 $light: #eee;
 $spaceBackgroundPrimary: linear-gradient(116.82deg, #07111A 0%, #0C154A 77.12%, #0F1C68 100%);
 $spaceBackgroundSecondary: linear-gradient(116.82deg, #010509 0%, #050A28 65.27%, #060E3D 100%);
+
 $h1Size: calc(3rem + 10px);
 $h2Size: calc(2rem + 8px);
+$subheadingSize: calc(1rem + 6px);
+$subheadingMargin: 13rem;
+$shortInfoMargin: 1.5rem;
+$shortInfoLineHeight: 1.5rem;
+
+$buttonBackground: linear-gradient(135deg, $secondary 0%, $third 100%);
+$buttonShadow: rgb(96, 68, 11);
+
+$playButtonMargin: 1.5rem;
