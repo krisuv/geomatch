@@ -3,6 +3,8 @@
 .footer{
   padding: .5rem 2rem;
   background-color: $primary;
+  position: relative;
+  z-index: 20;
 
   &__copyright{
     font-weight: 700;
