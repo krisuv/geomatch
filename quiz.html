@@ -16,11 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
+
   </head>
   <body>
-
+  <div class="bottom-shadow"></div>
 
     <section class="quiz">
       <div class="welcome-text">
@@ -30,56 +31,55 @@
         <p class="welcome-text__subheading welcome-text__subheading--quiz-subheading">Let's kick off with it!</p>
       </div>
 
-      <article class="question" id="first">
-          <span class = "question__icon">⛪</span>
-        <h3 class="question__title">What is your favourite religious activity?</h3>
-        <div class="question__answers">
-<!--          <form action="">-->
-            <input class="question__option" type="radio" name="answer" id="1">
-            <label class="question__label" for="1">meditation</label>
-            <input class="question__option" type="radio" name="answer" id="2">
-            <label class="question__label" for="2">holy mass</label>
-            <input class="question__option" type="radio" name="answer" id="3">
-            <label class="question__label" for="3">ramadan</label>
-            <input class="question__option" type="radio" name="answer" id="4">
-            <label class="question__label" for="4">jedi cult</label>
-<!--          </form>-->
-        </div>
-      </article>
+      <form class = "questions-form" action="result.html" method="get">
 
-        <article class="question" id="second">
-            <span class = "question__icon">⛪</span>
+          <article class="question" id="first">
+              <span class = "question__icon">⛪</span>
             <h3 class="question__title">What is your favourite religious activity?</h3>
             <div class="question__answers">
-                <!--          <form action="">-->
-                <input class="question__option" type="radio" name="answer2" id="5">
-                <label class="question__label" for="5">meditation</label>
-                <input class="question__option" type="radio" name="answer2" id="6">
-                <label class="question__label" for="6">holy mass</label>
-                <input class="question__option" type="radio" name="answer2" id="7">
-                <label class="question__label" for="7">ramadan</label>
-                <input class="question__option" type="radio" name="answer2" id="8">
-                <label class="question__label" for="8">jedi cult</label>
-                <!--          </form>-->
+                <input class="question__option" type="radio" name="answer1" id="1">
+                <label class="question__label" for="1">meditation</label>
+                <input class="question__option" type="radio" name="answer1" id="2">
+                <label class="question__label" for="2">holy mass</label>
+                <input class="question__option" type="radio" name="answer1" id="3">
+                <label class="question__label" for="3">ramadan</label>
+                <input class="question__option" type="radio" name="answer1" id="4">
+                <label class="question__label" for="4">jedi cult</label>
             </div>
-        </article>
+          </article>
 
-        <article class="question" id="third">
-            <span class = "question__icon">⛪</span>
-            <h3 class="question__title">What is your favourite religious activity?</h3>
-            <div class="question__answers">
-                <!--          <form action="">-->
-                <input class="question__option" type="radio" name="answer3" id="9">
-                <label class="question__label" for="9">meditation</label>
-                <input class="question__option" type="radio" name="answer3" id="10">
-                <label class="question__label" for="10">holy mass</label>
-                <input class="question__option" type="radio" name="answer3" id="11">
-                <label class="question__label" for="11">ramadan</label>
-                <input class="question__option" type="radio" name="answer3" id="12">
-                <label class="question__label" for="12">jedi cult</label>
-                <!--          </form>-->
-            </div>
-        </article>
+            <article class="question" id="second">
+                <span class = "question__icon">⛪</span>
+                <h3 class="question__title">What is your favourite religious activity?</h3>
+                <div class="question__answers">
+                    <!--          <form action="">-->
+                    <input class="question__option" type="radio" name="answer2" id="5">
+                    <label class="question__label" for="5">meditation</label>
+                    <input class="question__option" type="radio" name="answer2" id="6">
+                    <label class="question__label" for="6">holy mass</label>
+                    <input class="question__option" type="radio" name="answer2" id="7">
+                    <label class="question__label" for="7">ramadan</label>
+                    <input class="question__option" type="radio" name="answer2" id="8">
+                    <label class="question__label" for="8">jedi cult</label>
+                    <!--          </form>-->
+                </div>
+            </article>
+
+            <article class="question" id="third">
+                <span class = "question__icon">⛪</span>
+                <h3 class="question__title">What is your favourite religious activity?</h3>
+                <div class="question__answers">
+                    <!--          <form action="">-->
+                    <input class="question__option" type="radio" name="answer3" id="9">
+                    <label class="question__label" for="9">meditation</label>
+                    <input class="question__option" type="radio" name="answer3" id="10">
+                    <label class="question__label" for="10">holy mass</label>
+                    <!--          </form>-->
+                </div>
+            </article>
+
+<!--          <button class="button button&#45;&#45;quiz" type="submit">submit</button>-->
+      </form>
 
     </section>
 

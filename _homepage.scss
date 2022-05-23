@@ -14,15 +14,12 @@
 .welcome-text,
 .short-info{
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .welcome-text{
   &__header {
     font-size: $h1Size;
-    //position: relative;
-    //left: -.5rem;
-    //top: 1.5rem;
   }
 
   &__span {
@@ -48,14 +45,10 @@
 }
 
 .short-info{
-  //margin: $shortInfoMargin 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  //height: 300px;
-  gap: 1.5rem;
-  flex-grow: 1;
+  @include flex(column, space-around);
+  //justify-content: space-around;
+  //gap: 1.5rem;
+  //flex-grow: 1;
   line-height: 1.8rem;
 
   &__paragraph{
@@ -64,8 +57,7 @@
 }
 
 .planet-image{
-  width: clamp(260px, 35vw ,400px);
+  width: clamp(260px, 35vw ,800px);
   position: absolute;
   @include centerEarth();
-  z-index: 0;
 }

@@ -3,6 +3,7 @@
 section {
   line-height: 1.6rem;
   margin: 5rem 0;
+
   .about-quiz {
     margin-top: 1rem;
     &__list {
@@ -15,10 +16,8 @@ section {
     }
   }
   .about-me{
-    //padding-inline: 2rem;
     margin-bottom: 2rem;
     &__info {
-      //text-align: justify;
 
       &--more-info{
         font-weight: 500;

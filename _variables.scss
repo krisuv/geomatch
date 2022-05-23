@@ -13,15 +13,26 @@ $shortInfoMargin: 3rem;
 $shortInfoLineHeight: 1.5rem;
 
 $buttonBackground: linear-gradient(135deg, $secondary 0%, $third 100%);
-$checkedAnswer: linear-gradient(140deg, rgba(177,224,25,0.9) 0%, rgba(27,230,197,0.3) 100%);
+$activeOption: linear-gradient(140deg, rgba(177,224,25,0.9) 0%, rgba(27,230,197,0.3) 100%);
 $buttonShadow: rgb(96, 68, 11);
 
 $playButtonMargin: 1.5rem;
 
-@mixin flexbox {
+
+$textSmall: 1rem;
+$textMedium: 1.5rem;
+$textLarge: 2rem;
+$textXLarge: 2.5rem;
+$textXXLarge: 3rem;
+$text3XLarge: 3.5rem;
+
+@mixin flex($flexDirection: row, $justifyContent: center, $gap: 1.5rem){
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+  flex-grow: 1;
+  gap: $gap;
 }
 
 @mixin center {
@@ -47,15 +58,15 @@ $playButtonMargin: 1.5rem;
   left: 80%;
 }
 
-@mixin stars {
-  content: '';
-  background: url('img/stars.png');
-  object-fit: cover;
-  opacity: .5;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform: scaleX(-1);
-}
+//@mixin stars {
+//  content: '';
+//  background: url('img/stars.png');
+//  object-fit: cover;
+//  opacity: .5;
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//  top: 0;
+//  left: 0;
+//  transform: scaleX(-1);
+//}

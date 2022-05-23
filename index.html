@@ -15,17 +15,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script defer src="./geolocation.js"></script>
   </head>
 
   <body>
   <div class="bottom-shadow"></div>
 
     <main class="homepage">
+
       <div class="welcome-text">
-        <h1 class="header welcome-text__header">
+        <h1 class="header welcome-text__header index">
           <span class="header-span-geo welcome-text__span welcome-text__span--geo">geo</span><span class="header-span-match welcome-text__span welcome-text__span--match">match</span>
         </h1>
-        <p class="subheading welcome-text__subheading">Hi there You nice person from <span class="welcome-text__city">Szczecin</span>
+        <p class="subheading welcome-text__subheading index">Hi there You nice person from <span class="welcome-text__city">???</span>
         </p>
       </div>
 
@@ -34,7 +36,7 @@
           Attention! Don't treat this game seriously, it's just a joke.
         </p>
 <!--        <p class="short-info__paragraph short-info__paragraph&#45;&#45;warning">Attention! Don't treat this game seriously, it's just a joke.</p>-->
-        <button class="button button--play">play!</button>
+        <a class = "quiz-link" href="./quiz.html"><button class="button button--play">play!</button></a>
       </div>
 
       <img
@@ -42,6 +44,7 @@
         src="img/earthFromFreeimgs.png"
         alt="earth image"
       />
+
     </main>
 
     <section class="about-quiz">

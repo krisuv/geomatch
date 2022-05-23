@@ -2,6 +2,10 @@
 
 .result {
   margin-top: 4rem;
+  @include flex(column, space-around);
+  &__header {
+    @include centerText();
+  }
   &__info{
     text-align: center;
   }
