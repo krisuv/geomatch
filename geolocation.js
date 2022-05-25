@@ -1,5 +1,6 @@
 const userCity = document.querySelector('.welcome-text__city')
 let userLocation = null
+let savedCity = localStorage.getItem("city") || null
 
 const success = (userLocation) => {
     const lat = userLocation.coords.latitude.toString()
@@ -22,16 +23,23 @@ const error = (error) => {
 
 }
 
-if(!navigator.geolocation) {
-    console.info('Geolocation is not supported by your browser')
+if(!savedCity){
+    if(!navigator.geolocation) {
+        console.info('Geolocation is not supported by your browser')
+    } else {
+        userLocation = navigator.geolocation.getCurrentPosition(success,error, {enableHighAccuracy: true})
+    }
 } else {
-    userLocation = navigator.geolocation.getCurrentPosition(success,error, {enableHighAccuracy: true})
+    userCity.textContent = savedCity
 }
 
 const findCity = ({latitude, longitude}) => {
     const token = 'pk.054f4d0bf4fcdaaf1aa82b0c9b403246'
     const URL = `https://eu1.locationiq.com/v1/reverse.php?key=${token}&lat=${latitude}&lon=${longitude}&format=json`
     //console.log(fetch(`https://eu1.locationiq.com/v1/reverse.php?key=${token}&lat=${latitude}&lon=${longitude}&format=json`))
+    // if(savedCity){
+    //     return userCity.textContent = savedCity
+    // }
     fetch(URL)
         .then(res => {
             if(res.ok){
@@ -42,7 +50,10 @@ const findCity = ({latitude, longitude}) => {
         })
         .then(data => {
             console.log(data.address)
-            userCity.textContent = data.address.city
+            savedCity = data.address.city
+            localStorage.setItem("city", savedCity)
+            userCity.textContent = savedCity
+            //userCity.textContent = data.address.city
         })
         .catch(error => {
             console.error(error)
