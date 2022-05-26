@@ -48,7 +48,7 @@
 }
 
 .planet-image {
-  width: clamp(260px, 35vw, 800px);
+  width: clamp(260px, 35vw ,800px);
   position: absolute;
   top: 36px;
   left: 50%;
@@ -126,7 +126,7 @@ section .about-me__info--more-info .python {
   gap: 0;
   position: relative;
   margin: 3rem auto 1rem;
-  width: clamp(250px, 30vw, 560px);
+  width: clamp(250px,30vw,560px);
   background: radial-gradient(100% 100% at 24.22% 0%, rgba(163, 177, 236, 0.7) 0%, rgba(163, 177, 236, 0.1) 100%);
   border: 1px solid rgba(163, 177, 236, 0.3);
   backdrop-filter: blur(25px);
@@ -136,7 +136,7 @@ section .about-me__info--more-info .python {
 .question__icon {
   position: absolute;
   font-size: 2rem;
-  top: -11%;
+  top: -8%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -167,9 +167,9 @@ section .about-me__info--more-info .python {
   font-size: 0.8rem;
   border-radius: 5px;
   padding: 0.3rem 0.8rem;
-  background: linear-gradient(135deg, rgb(229, 193, 45) 0%, rgb(230, 122, 27) 100%);
+  background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
   color: black;
-  box-shadow: 0px 4px 4px rgb(96, 68, 11);
+  box-shadow: 0px 4px 4px #60440b;
   min-height: 25px;
   line-height: initial;
   word-wrap: break-word;
@@ -264,9 +264,9 @@ a {
   height: 41px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, rgb(229, 193, 45) 0%, rgb(230, 122, 27) 100%);
+  background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
   border-radius: 15px;
-  box-shadow: 0px 4px 4px rgb(96, 68, 11);
+  box-shadow: 0px 4px 4px #60440b;
   font-weight: 700;
   font-size: 22px;
   color: white;
@@ -280,7 +280,7 @@ a {
   bottom: 0;
   z-index: 10;
   pointer-events: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, 0.01)), color-stop(15.5%, rgba(1, 5, 9, 0.047)), color-stop(22.5%, rgba(1, 5, 9, 0.106)), color-stop(29%, rgba(1, 5, 9, 0.176)), color-stop(35.3%, rgba(1, 5, 9, 0.26)), color-stop(41.2%, rgba(1, 5, 9, 0.353)), color-stop(47.1%, rgba(1, 5, 9, 0.45)), color-stop(52.9%, rgba(1, 5, 9, 0.55)), color-stop(58.8%, rgba(1, 5, 9, 0.647)), color-stop(64.7%, rgba(1, 5, 9, 0.74)), color-stop(71%, rgba(1, 5, 9, 0.824)), color-stop(77.5%, rgba(1, 5, 9, 0.894)), color-stop(84.5%, rgba(1, 5, 9, 0.953)), color-stop(91.9%, rgba(1, 5, 9, 0.99)), to(rgb(1, 5, 9)));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, 0.01)), color-stop(15.5%, rgba(1, 5, 9, 0.047)), color-stop(22.5%, rgba(1, 5, 9, 0.106)), color-stop(29%, rgba(1, 5, 9, 0.176)), color-stop(35.3%, rgba(1, 5, 9, 0.26)), color-stop(41.2%, rgba(1, 5, 9, 0.353)), color-stop(47.1%, rgba(1, 5, 9, 0.45)), color-stop(52.9%, rgba(1, 5, 9, 0.55)), color-stop(58.8%, rgba(1, 5, 9, 0.647)), color-stop(64.7%, rgba(1, 5, 9, 0.74)), color-stop(71%, rgba(1, 5, 9, 0.824)), color-stop(77.5%, rgba(1, 5, 9, 0.894)), color-stop(84.5%, rgba(1, 5, 9, 0.953)), color-stop(91.9%, rgba(1, 5, 9, 0.99)), to(#010509));
 }
 
 @media all and (max-width: 350px) {
