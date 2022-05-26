@@ -59,6 +59,4 @@ const colors = [
 
 countryNames.forEach((country,index) => countries.push(new Country(country,0,colors[index])))
 
-// const [poland, czechia, germany, finland, uk, italy, greece, russia, egypt, uganda, israel, uae, india, china, japan, indonesia, usa, canada, mexico, brazil, australia] = [...countries]
-
 export default countries

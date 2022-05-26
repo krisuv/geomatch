@@ -171,7 +171,10 @@ const requiredAnswers = (event) => {
         const result = options.find(option => option.checked)
         if(result){
             //TUTAJ FUNKCJA
-            console.log('ok')
+            //będzie liczyć punkty dopiero na koniec, przy kliknięciu przycisku SUBMIT. nie będzie trzeba sprawdzać i odejmować punktów przy zmianie przycisku
+            let answerId = (parseInt(result.id))
+            console.log(answerId)
+            //questions.find( question.answers =>  )
         } else {
             event.preventDefault();
             totalResult = false
