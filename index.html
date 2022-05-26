@@ -7,6 +7,10 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Quiz which shows which country is most consistent with You">
+    <meta name="keywords" content="quiz, countries, world">
+    <meta name="author" content="Krzysztof Bujalski">
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>geomatch</title>
 
@@ -15,13 +19,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <script defer src="./geolocation.js"></script>
+    <script defer src="js/geolocation.js"></script>
   </head>
 
   <body>
   <div class="bottom-shadow"></div>
 
-    <main class="homepage">
+    <main class="homepage" aria-label="quiz home page">
 
       <div class="welcome-text">
         <h1 class="header welcome-text__header index">
@@ -36,7 +40,7 @@
           Attention! Don't treat this game seriously, it's just a joke.
         </p>
 <!--        <p class="short-info__paragraph short-info__paragraph&#45;&#45;warning">Attention! Don't treat this game seriously, it's just a joke.</p>-->
-        <a class = "quiz-link" href="./quiz.html"><button class="button button--play">play!</button></a>
+        <a class = "quiz-link" href="./quiz.html"><button class="button button--play" aria-label="click to play the quiz">play!</button></a>
       </div>
 
       <img
@@ -47,7 +51,7 @@
 
     </main>
 
-    <section class="about-quiz">
+    <section class="about-quiz" aria-label="section about quiz">
       <h2 class="about-quiz__header">about the quiz</h2>
       <h3 class="about-quiz__subheader">Stack used for this webapp:</h3>
       <ul class="about-quiz__list">
@@ -60,13 +64,13 @@
       <p class="about-quiz__paragraph">I came up with an idea for making something different than calc or todo-list. I decided to train myself in Sass and create my first mobile-first webapp.</p>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" aria-label="section about the author">
       <h2 class="about-me__header">about me</h2>
       <p class="about-me__info">My name’s Chris and I’m looking forward to become a web developer. I’m more into frontend, however I want to learn backend as well. I feel confident in vanilla JS and right now I'm getting to know Typescript nad React. Soon I would love to kick off with Node.js and databases.</p>
       <p class="about-me__info about-me__info--more-info">I'm based in Szczecin and studying at University of Szczecin(IV semester of "IT in Business" course). At the Uni we program in <span class="csharp">C#</span> and <span class="python">python</span>.</p>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" aria-label="social media links and copyright">
       <div class="footer__socials">
         <a href="https://github.com/krisuv"><img class="footer__link footer__link--github" src="img/icons8-github-64.png" alt="github link"></a>
         <a href="#"><img class="footer__link footer__link--linkedin" src="img/icons8-linkedin-64.png" alt="linkedin link"></a>

@@ -36,10 +36,7 @@ if(!savedCity){
 const findCity = ({latitude, longitude}) => {
     const token = 'pk.054f4d0bf4fcdaaf1aa82b0c9b403246'
     const URL = `https://eu1.locationiq.com/v1/reverse.php?key=${token}&lat=${latitude}&lon=${longitude}&format=json`
-    //console.log(fetch(`https://eu1.locationiq.com/v1/reverse.php?key=${token}&lat=${latitude}&lon=${longitude}&format=json`))
-    // if(savedCity){
-    //     return userCity.textContent = savedCity
-    // }
+
     fetch(URL)
         .then(res => {
             if(res.ok){
@@ -53,7 +50,6 @@ const findCity = ({latitude, longitude}) => {
             savedCity = data.address.city
             localStorage.setItem("city", savedCity)
             userCity.textContent = savedCity
-            //userCity.textContent = data.address.city
         })
         .catch(error => {
             console.error(error)
