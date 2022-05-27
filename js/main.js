@@ -1,7 +1,6 @@
 import countries from "./countries.js";
 import { questions } from "./questions.js";
-//export let winnerCountry
-//import countries from "./countries.js";
+import { generateRandomSubheading } from "./randomText.js";
 
 const resultSection = `
     <section class="results" aria-label="quiz results">
@@ -49,30 +48,20 @@ let inputName = 1
 let id = 1
 let questionId = 1
 
-const generateRandomSubheading = (() => {
-
-    const subheadingTexts = ["Let's kick off with it!", "Let's gooooo!", "Can't wait to see the result!", "Answear honestly!", "Looking forward to seeing the result!", "All you have to do is answering truthgully!"]
-
-    const randomText = subheadingTexts[Math.floor(Math.random()* subheadingTexts.length)]
-    quizSubheading.textContent = randomText
-})()
-
-//generateRandomSubheading(subheadingTexts)
+generateRandomSubheading()
 
 
-const createQuestionTemplate = (avatar,description) => (
-    `<article class="question" id="fourth">
+const createQuestion = ({description, avatar, answers}) => {
+
+    const createQuestionTemplate = (avatar,description) => (
+        `<article class="question" id="fourth">
               <span class = "question__icon">${avatar}</span>
             <h3 class="question__title">${description}</h3>
             <div class="question__answers">
                 
             </div>
           </article>`
-)
-
-
-
-const createQuestion = ({description, avatar, answers}) => {
+    )
 
 
     const question = document.createElement('article')
