@@ -1,6 +1,30 @@
 import countries from "./countries.js";
 import { questions } from "./questions.js";
+//export let winnerCountry
 //import countries from "./countries.js";
+
+const resultSection = `
+    <section class="quiz quiz--results" aria-label="quiz results">
+        <div class="welcome-text">            
+            <p class="welcome-text__subheading welcome-text__subheading--quiz-subheading">It seems you should be born
+                in...</p>
+            <div class="result">
+                <h2 class="result__header">Poland!</h2>
+                <p class="result__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut commodi
+                    consectetur ea earum facilis ipsam laborum laudantium, natus necessitatibus neque odio optio quae
+                    quam qui quia sapiente sint sit tempora ut! Autem beatae consectetur fugit iusto quae similique,
+                    voluptates.</p>
+
+                <div class="buttons">
+                    <a class="quiz-link" href="./quiz.html"><button class="button button--play"
+                            aria-label="play again">play again</button></a>
+                    <a class="quiz-link" href="./index.html"><button class="button button--play"
+                            aria-label="go back to main page">back to main page</button></a>
+                </div>
+            </div>
+        </div>
+    </section>`
+    document.querySelector('.results').innerHTML += resultSection
 
 const options = [...document.querySelectorAll('.question__option')]
 const quizSubheading = document.querySelector('.welcome-text__subheading--quiz-subheading')
@@ -95,8 +119,8 @@ const createQuestion = ({description, avatar, answers}) => {
 
 questions.forEach(question => createQuestion(question))
 
-console.log(questions[0])
-console.log(questions[19])
+// console.log(questions[0])
+// console.log(questions[19])
 
 const submitButton = document.createElement('button')
 submitButton.textContent = 'submit'
@@ -105,7 +129,10 @@ submitButton.classList.add('button--quiz')
 quizForm.appendChild(submitButton)
 
 // jest problem z totalResult- zawsze na początku ma wartośc true
-const requiredAnswers = (event) => {
+
+
+
+const requiredAnswers = (event) => {    
     event.preventDefault();
     let totalResult = true
     const checkedAnswers = []
@@ -131,7 +158,7 @@ const requiredAnswers = (event) => {
             // })
             
         } else {
-            event.preventDefault();
+            event.preventDefault()
             //countries.forEach(country => country.points = 0)
             totalResult = false
         }
@@ -141,7 +168,7 @@ const requiredAnswers = (event) => {
     if(!totalResult){
         console.warn(`You must have forgotten to check the answer in one of the questions 🧿`)
     } else {
-        console.log(checkedAnswers)
+        //console.log(checkedAnswers)
 
         let xD = []
         allAnswers.filter( answer => {
@@ -151,16 +178,43 @@ const requiredAnswers = (event) => {
                 }
             })
         })
-        console.log(xD)
+        //console.log(xD)
 
         xD.forEach( answer => {
             answer.countries.forEach(country => {
                 country.points++
             })
         })
-        console.log(countries)
+        //console.log(countries)
+
+        // function maxValue(...args) {
+        //     const max= args.reduce((acc, val) => {
+        //         return acc > val ? acc : val;
+        //     });
+        //     return max;
+        // }
+        const maxPoints = (countries) => {
+            let maxCountries = []
+            const max = countries.reduce((acc, val) => {
+                if(acc.points === val.points) maxCountries.push(val) 
+                return acc.points >= val.points ? acc : val
+            })
+            if(maxCountries.length){
+                return maxCountries
+            }
+            return max
+        }
+
+        const winnerCountry = maxPoints(countries)
+
+        console.log(winnerCountry)
     }
+
+    console.log(countries)
+
 }
 
 const questionsAnswers = [...document.querySelectorAll('.question__answers')]
+
+
 submitButton.addEventListener('click', requiredAnswers)
