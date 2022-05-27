@@ -151,6 +151,7 @@ const Question16 = new Question(
     new Answer('snowing', russia, canada, finland)
 )
 
+//poprawić odpowiedzi
 const Question17 = new Question(
     'Wanna smoke a cigarette?',
     '🚬',

@@ -1,8 +1,18 @@
+import countries from "./countries.js";
 import { questions } from "./questions.js";
+//import countries from "./countries.js";
 
 const options = [...document.querySelectorAll('.question__option')]
 const quizSubheading = document.querySelector('.welcome-text__subheading--quiz-subheading')
 const quizForm = document.querySelector('.questions-form')
+
+// all answers
+let allAnswers = []
+questions.forEach(question => {
+    allAnswers.push(question.answers)
+})
+allAnswers = allAnswers.flat()
+console.log(allAnswers)
 
 
 let inputName = 1
@@ -83,70 +93,6 @@ const createQuestion = ({description, avatar, answers}) => {
 }
 
 
-//konkretny przycisk
-// if(document.getElementById('1').checked == true) {
-//     console.log("radio button is selected");
-// } else {
-//     console.log("radio button is not selected");
-// // }
-
-//jakiś przycisk w grupie
-// var getSelectedValue = document.querySelector( 'input[name="season"]:checked');
-// if(getSelectedValue != null) {
-//     document.write("Radio button is selected");
-// else {
-//         document.write("Nothing has been selected");
-
-//wartość przycisku
-// if(document.getElementById('summer').checked) {
-//     var selectedValue = document.getElementById('summer').value;
-//     alert("Selected Radio Button is: " + selectedValue);
-// }
-
-// <html>
-// <body>
-// <br><b> Choose your favroite season: </b><br>
-//     <input type="radio" id="summer" value="Summer">Summer<br>
-//         <input type="radio" id="winter" value="Winter">Winter<br>
-//             <input type="radio" id="rainy" value="Rainy">Rainy<br>
-//                 <input type="radio" id="autumn" value="Autumn">Autumn<br><br>
-//
-//                     <button type="button" onClick=" checkButton()"> Submit</button>
-//
-//                     <h3 id="disp" style="color:green"></h3>
-//                     <h4 id="error" style="color:red"></h4>
-// </body>
-//
-// <script>
-//     function checkButton() {
-//     if(document.getElementById('summer').checked) {
-//     document.getElementById("disp").innerHTML
-//     = document.getElementById("summer").value
-//     + " radio button is checked";
-// }
-//     else if(document.getElementById('winter').checked) {
-//     document.getElementById("disp").innerHTML
-//     = document.getElementById("winter").value
-//     + " radio button is checked";
-// }
-//     else if(document.getElementById('rainy').checked) {
-//     document.getElementById("disp").innerHTML
-//     = document.getElementById("rainy").value
-//     + " radio button is checked";
-// }
-//     else if(document.getElementById('autumn').checked) {
-//     document.getElementById("disp").innerHTML
-//     = document.getElementById("autumn").value
-//     + " radio button is checked";
-// }
-//     else {
-//     document.getElementById("error").innerHTML
-//     = "You have not selected any season";
-// }
-// }
-// </script>
-// </html>
-
 questions.forEach(question => createQuestion(question))
 
 console.log(questions[0])
@@ -158,41 +104,63 @@ submitButton.classList.add('button')
 submitButton.classList.add('button--quiz')
 quizForm.appendChild(submitButton)
 
-
-//const optionButtons = [...document.querySelectorAll('.question__option')]
-//const questions = [...document.querySelectorAll('.question__answers')]
-
+// jest problem z totalResult- zawsze na początku ma wartośc true
 const requiredAnswers = (event) => {
-    //debugger;
+    event.preventDefault();
     let totalResult = true
-    //const questions = [...document.querySelectorAll('.question__answers')]
+    const checkedAnswers = []
+
     questionsAnswers.forEach(answer => {
         const options = [...answer.querySelectorAll('.question__option')]
         const result = options.find(option => option.checked)
+        
         if(result){
-            //TUTAJ FUNKCJA
-            //będzie liczyć punkty dopiero na koniec, przy kliknięciu przycisku SUBMIT. nie będzie trzeba sprawdzać i odejmować punktów przy zmianie przycisku
-            let answerId = (parseInt(result.id))
-            console.log(answerId)
-            //questions.find( question.answers =>  )
+            const answerId = (parseInt(result.id))
+            checkedAnswers.push(answerId)
+            //let choosenAnswer = null
+
+            // questions.forEach( question => {
+            //     const correctAnswer = question.answers.find( answer => answer.id === answerId)
+            //     if(correctAnswer && totalResult){
+            //         choosenAnswer = correctAnswer
+            //         console.log(choosenAnswer)
+            //         choosenAnswer.countries.forEach( country => {
+            //             ++country.points
+            //         })
+            //     }
+            // })
+            
         } else {
             event.preventDefault();
+            //countries.forEach(country => country.points = 0)
             totalResult = false
         }
-
     })
 
+    
     if(!totalResult){
         console.warn(`You must have forgotten to check the answer in one of the questions 🧿`)
+    } else {
+        console.log(checkedAnswers)
+
+        let xD = []
+        allAnswers.filter( answer => {
+            checkedAnswers.forEach( checkedAnswer => {
+                if(answer.id === checkedAnswer){
+                    xD.push(answer)
+                }
+            })
+        })
+        console.log(xD)
+
+        xD.forEach( answer => {
+            answer.countries.forEach(country => {
+                country.points++
+            })
+        })
+        console.log(countries)
     }
 }
 
 const questionsAnswers = [...document.querySelectorAll('.question__answers')]
 submitButton.addEventListener('click', requiredAnswers)
-
-
-
-// const checkAnswer = () => {
-//     const thisQuestion = [...document.querySelectorAll('.question__option')]
-//     Question1.answers[0].countries
-// }
