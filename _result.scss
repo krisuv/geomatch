@@ -1,18 +1,28 @@
 @import "./variables.scss";
 
+.results{
+  padding: 0 2.2rem 2.4rem;
+  margin: 0;
+}
+
 .result {
   margin-top: 4rem;
   @include flex(column, space-around);
+
   &__header {
     @include centerText();
   }
+
   &__info{
     text-align: center;
   }
 
   .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    @include flex(column,space-between);
+    margin-top: 2rem;
+    .button {
+      width: max-content;
+      padding: .5rem 1rem;
+    }
   }
 }

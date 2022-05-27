@@ -19,7 +19,7 @@
 
 .welcome-text{
   &__header {
-    font-size: $h1Size;
+    font-size: $text3XLarge;
   }
 
   &__span {
@@ -32,7 +32,7 @@
   }
 
   &__subheading{
-    font-size: $subheadingSize;
+    font-size: $textMedium;
     color: $primary;
     margin-top: $subheadingMargin;
     text-align: center;
@@ -59,5 +59,7 @@
 .planet-image{
   width: clamp(260px, 35vw ,800px);
   position: absolute;
-  @include centerEarth();
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
 }

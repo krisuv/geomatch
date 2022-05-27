@@ -1,0 +1,120 @@
+@import "./variables.scss";
+
+@media all and (max-width: 350px) {
+  html{
+    font-size: 13px;
+  }
+
+  .quiz {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media all and (min-width: 490px) {
+  .question__answers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-height: 1000px){
+  .short-info{
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+  }
+
+}
+
+@media (min-width: 800px),(min-height: 1200px) {
+  html{
+    font-size: 16px;
+  }
+
+  .planet-image{
+    top: 30px;
+    left: 80%;
+  }
+
+  .quiz-link {
+    align-self: flex-start;
+  }
+
+  .welcome-text__header{
+    font-size: 6rem;
+  }
+  .welcome-text__subheading{
+    margin-top: 1.5rem;
+  }
+
+  .index {
+    text-align: left;
+  }
+
+  .short-info{
+    max-width: 50vw;
+  }
+
+  .footer__socials,
+  .footer__copyright{
+    @include centerText();
+  }
+
+  main.homepage {
+    padding: 1.5rem 4rem;
+  }
+
+  section.about-quiz,
+  section.about-me {
+    padding: 1.5rem 15vw;
+  }
+
+  h1,
+  h2 {
+    @include centerText(left,0);
+  }
+
+  .welcome-text {
+    &__header--quiz-header{
+      @include  centerText(center,auto);
+    }
+    &__subheading--quiz-subheading{
+      margin-top: 3rem;
+    }
+  }
+
+  .result {
+    &__info{
+      margin-inline: 25vw;
+    }
+    .buttons{
+      @include flex(row,space-between,3rem);
+    }
+  }
+
+}
+
+@media (min-width: 1200px) {
+  html{
+    font-size: 18px;
+  }
+
+  main.homepage {
+    padding: 1.5rem 6rem;
+  }
+
+  section.about-quiz,
+  section.about-me {
+    padding: 1.5rem 30vw;
+  }
+
+  .question__label,
+  .button--play,
+  .button--quiz {
+    transition: ease-in .1s;
+  }
+  .question__label:hover,
+  .button--play:hover,
+  .button--quiz:hover {
+    transform: scale(.97);
+  }
+}

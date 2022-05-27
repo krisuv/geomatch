@@ -21,14 +21,14 @@ class Question {
 }
 
 const Question1 = new Question(
-    'tea or coffee?',
+    'Tea or coffee?',
     '☕',
     new Answer("tea", uk, japan, poland, russia, china, indonesia, india, egypt),
     new Answer("coffee", czechia, germany, finland, italy, greece,  israel, uae, usa, canada, mexico, brazil, australia, uganda)
 )
 
 const Question2 = new Question(
-    'right or left side of the road?',
+    'Left or Right side of the road?',
     '🛣️',
     new Answer("left", uk, japan, india, indonesia, australia, uganda),
     new Answer("right", poland, czechia, germany, finland, italy, greece, russia, egypt, israel, uae, china, usa, canada, mexico, brazil)
@@ -54,7 +54,7 @@ const Question4 = new Question(
 )
 
 const Question5 = new Question(
-    `Pick one means of transport to get to your work place:`,
+    `Pick one means of transport to get to your place:`,
     '🚗',
     new Answer('car', germany, finland, uae, usa, canada, australia),
     new Answer('bus', uk, egypt, indonesia, india, mexico, brazil),
@@ -63,7 +63,7 @@ const Question5 = new Question(
 )
 
 const Question6 = new Question(
-    'is it better to live on an island than on mainland?',
+    'Is it better to live on an island than on mainland?',
     '🏝️',
     new Answer("yes", uk, japan,  indonesia, australia, greece),
     new Answer("no", uganda, india, poland, czechia, germany, finland, italy, russia, egypt, israel, uae, china, usa, canada, mexico, brazil)
@@ -103,9 +103,9 @@ const Question10 = new Question(
 )
 
 const Question11 = new Question(
-    'I like people who:',
+    'I like people who are:',
     '🧍🏾‍♂️🧍🏽‍♀️🧍🏼',
-    new Answer('are crazy and loud', israel, greece, brazil, usa, australia, italy, mexico, uganda, egypt, indonesia, india),
+    new Answer('crazy and loud', israel, greece, brazil, usa, australia, italy, mexico, uganda, egypt, indonesia, india),
     new Answer('calm and quiet', finland, japan),
     new Answer('something between',poland, canada, czechia, uk, germany, russia, uae, china)
 )
@@ -151,7 +151,6 @@ const Question16 = new Question(
     new Answer('snowing', russia, canada, finland)
 )
 
-//poprawić odpowiedzi
 const Question17 = new Question(
     'Wanna smoke a cigarette?',
     '🚬',
@@ -162,17 +161,17 @@ const Question17 = new Question(
 const Question18 = new Question(
     `Pick sport that gives you most fun:`,
     '🏀',
-    new Answer('football',australia, uganda, brazil, mexico, india, indonesia, egypt, uae),
-    new Answer('swimming', usa, israel, italy, greece, china, japan),
-    new Answer('basketball', uk, germany, czechia, poland),
-    new Answer('ping pong', russia, canada, finland)
+    new Answer('football', germany, poland, uk, italy, uganda, brazil, mexico),
+    new Answer('swimming', australia, israel, greece, indonesia, egypt, uae),
+    new Answer('hockey', canada, usa, russia, finland, czechia),
+    new Answer('ping pong', india, china, japan)
 )
 
 const Question19 = new Question(
     'I eat:',
     '🥪',
-    new Answer("walking", czechia, germany, indonesia, italy, poland, japan, greece, russia, egypt, israel, china),
-    new Answer("sitting",mexico, brazil, uganda, finland, usa, canada, australia, uk, uae, india)
+    new Answer("walking", finland, usa, canada, czechia, germany, italy, poland, russia, uk),
+    new Answer("sitting", japan, egypt, israel, china, greece, indonesia, mexico, brazil, uganda, australia, uae, india)
 )
 
 const Question20 = new Question(

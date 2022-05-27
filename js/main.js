@@ -4,7 +4,7 @@ import { questions } from "./questions.js";
 //import countries from "./countries.js";
 
 const resultSection = `
-    <section class="quiz quiz--results" aria-label="quiz results">
+    <section class="results" aria-label="quiz results">
         <div class="welcome-text">            
             <p class="welcome-text__subheading welcome-text__subheading--quiz-subheading">It seems you should be born
                 in...</p>
@@ -29,6 +29,12 @@ const resultSection = `
 const options = [...document.querySelectorAll('.question__option')]
 const quizSubheading = document.querySelector('.welcome-text__subheading--quiz-subheading')
 const quizForm = document.querySelector('.questions-form')
+
+
+const showResult = () => {
+    const resultSection = document.querySelector('.results')
+    resultSection.innerHTML += resultSection
+}
 
 // all answers
 let allAnswers = []
@@ -211,10 +217,9 @@ const requiredAnswers = (event) => {
     }
 
     console.log(countries)
+    showResult()
 
 }
 
 const questionsAnswers = [...document.querySelectorAll('.question__answers')]
-
-
 submitButton.addEventListener('click', requiredAnswers)
