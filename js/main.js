@@ -23,7 +23,7 @@ const resultSection = `
             </div>
         </div>
     </section>`
-    document.querySelector('.results').innerHTML += resultSection
+   document.querySelector('.results').innerHTML += resultSection
 
 const options = [...document.querySelectorAll('.question__option')]
 const quizSubheading = document.querySelector('.welcome-text__subheading--quiz-subheading')

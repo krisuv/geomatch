@@ -57,7 +57,7 @@
   }
 
   &__label{
-    @include centerText();
+    @include centerText(center,0);
     @include flex();
     cursor: pointer;
     font-weight: 600;

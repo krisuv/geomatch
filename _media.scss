@@ -12,7 +12,7 @@
 
 @media all and (min-width: 490px) {
   .question__answers {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
