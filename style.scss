@@ -41,8 +41,7 @@ body {
 }
 
 .about-quiz,
-.about-me,
-.results {
+.about-me {
  min-height: 50vh;
 }
 
@@ -93,104 +92,3 @@ a{
   pointer-events: none;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, .01)), color-stop(15.5%, rgba(1, 5, 9, .047)), color-stop(22.5%, rgba(1, 5, 9, .106)), color-stop(29%, rgba(1, 5, 9, .176)), color-stop(35.3%, rgba(1, 5, 9, .26)), color-stop(41.2%, rgba(1, 5, 9, .353)), color-stop(47.1%, rgba(1, 5, 9, .45)), color-stop(52.9%, rgba(1, 5, 9, .55)), color-stop(58.8%, rgba(1, 5, 9, .647)), color-stop(64.7%, rgba(1, 5, 9, .74)), color-stop(71%, rgba(1, 5, 9, .824)), color-stop(77.5%, rgba(1, 5, 9, .894)), color-stop(84.5%, rgba(1, 5, 9, .953)), color-stop(91.9%, rgba(1, 5, 9, .99)),to(rgb(1,5,9)));
 }
-
-//@media all and (max-width: 350px) {
-//  html{
-//    font-size: 13px;
-//  }
-//
-//  .quiz {
-//    padding: 1.5rem 1rem;
-//  }
-//}
-//
-//@media (min-height: 1000px){
-//  .short-info{
-//    justify-content: center;
-//    gap: 3rem;
-//    margin: 3rem 0;
-//  }
-//
-//}
-//
-//@media (min-width: 800px),(min-height: 1200px) {
-//  html{
-//    font-size: 16px;
-//  }
-//  .planet-image{
-//    top: 30px;
-//    left: 80%;
-//  }
-//
-//  .quiz-link {
-//    align-self: flex-start;
-//  }
-//
-//  .welcome-text__header{
-//    //text-align: left;
-//    font-size: 6rem;
-//  }
-//  .welcome-text__subheading{
-//    margin-top: 1.5rem;
-//    //text-align: left;
-//  }
-//
-//  .index {
-//    text-align: left;
-//  }
-//
-//  .short-info{
-//    max-width: 50vw;
-//  }
-//
-//  .footer__socials,
-//  .footer__copyright{
-//    @include centerText();
-//  }
-//
-//  .homepage {
-//    padding-inline: 6rem;
-//  }
-//
-//  .about-quiz,
-//  .about-me {
-//    padding-inline: 25vw;
-//  }
-//
-//  h1,
-//  h2 {
-//    @include centerText(left,0);
-//  }
-//
-//  .welcome-text {
-//    &__header--quiz-header{
-//      @include  centerText(center,auto);
-//    }
-//    &__subheading--quiz-subheading{
-//      margin-top: 3rem;
-//    }
-//  }
-//
-//  .result {
-//    &__info{
-//      margin-inline: 25vw;
-//    }
-//    .buttons{
-//      @include flex(row,space-between,3rem);
-//    }
-//  }
-//
-//}
-//
-//@media (min-width: 1200px) {
-//  .question__label,
-//  .button--play,
-//  .button--quiz {
-//    transition: ease-in .1s;
-//  }
-//  .question__label:hover,
-//  .button--play:hover,
-//  .button--quiz:hover {
-//    transform: scale(.97);
-//  }
-//}

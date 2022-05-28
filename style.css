@@ -181,6 +181,9 @@ section .about-me__info--more-info .python {
   transform: scale(1.03);
 }
 
+.questions-form {
+  position: relative;
+}
 .questions-form .button--quiz {
   text-align: center;
   margin-inline: auto;
@@ -223,6 +226,34 @@ section .about-me__info--more-info .python {
   padding: 0.5rem 1rem;
 }
 
+.alert-message {
+  text-align: center;
+  margin-inline: auto;
+  color: #e67a1b;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.waiting {
+  font-size: 2rem;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media all and (max-width: 350px) {
   html {
     font-size: 13px;
@@ -374,8 +405,7 @@ body {
 }
 
 .about-quiz,
-.about-me,
-.results {
+.about-me {
   min-height: 50vh;
 }
 

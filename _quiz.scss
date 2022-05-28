@@ -84,9 +84,23 @@
 }
 
 .questions-form {
+  position: relative;
   .button--quiz {
     @include centerText();
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
 }
+
+//.alert-message {
+//  @include centerText();
+//  color:$third;
+//  font-size:$textXSmall;
+//  position: absolute;
+//  left: 50%;
+//  transform: translateX(-50%);
+//}
+//
+//.waiting{
+//  font-size:$textLarge;
+//}

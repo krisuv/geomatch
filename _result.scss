@@ -26,3 +26,33 @@
     }
   }
 }
+
+.alert-message {
+  @include centerText();
+  color:$third;
+  font-size:$textXSmall;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.waiting{
+  font-size:$textLarge;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
