@@ -6,11 +6,13 @@
 }
 
 .result {
-  margin-top: 4rem;
+  margin-top: 2rem;
   @include flex(column, space-around);
 
   &__header {
     @include centerText();
+    font-size:$textXXLarge;
+    @include flex();
   }
 
   &__info{
@@ -30,23 +32,18 @@
 .alert-message {
   @include centerText();
   color:$third;
-  font-size:$textXSmall;
+  font-size:$textSmall;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: 500;
 }
 
 .waiting{
   font-size:$textLarge;
-  animation-name: rotate;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: linear;
-
+  margin-top: 1rem;
+  animation: 2s linear infinite normal both rotate;
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0);

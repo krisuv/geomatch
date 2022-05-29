@@ -1,13 +1,30 @@
 @import "./variables.scss";
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 490px) {
   html{
     font-size: 13px;
   }
 
-  .quiz {
-    padding: 1.5rem 1rem;
+  .bottom-shadow {
+    display: none;
   }
+
+  .quiz {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .welcome-text__subheading--quiz-subheading {
+    margin-top: .5rem;
+  }
+
+  .results {
+    padding: 0 1rem 2.4rem;
+  }
+
+  .result__header {
+    @include flex(column, space-evenly, 2.5rem);
+  }
+
 }
 
 @media all and (min-width: 490px) {

@@ -106,7 +106,7 @@ section .about-me__info--more-info .python {
 
 .quiz {
   min-height: 100vh;
-  padding: 2.4rem 2.2rem;
+  padding: 2.4rem 2.2rem 3rem;
   margin: 0;
 }
 
@@ -170,7 +170,7 @@ section .about-me__info--more-info .python {
   padding: 0.3rem 0.8rem;
   background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
   color: black;
-  box-shadow: 0px 4px 4px #60440b;
+  box-shadow: 0 4px 4px #60440b;
   min-height: 25px;
   line-height: initial;
   word-wrap: break-word;
@@ -197,7 +197,7 @@ section .about-me__info--more-info .python {
 }
 
 .result {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -208,6 +208,13 @@ section .about-me__info--more-info .python {
 .result__header {
   text-align: center;
   margin-inline: auto;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 1.5rem;
 }
 .result__info {
   text-align: center;
@@ -230,20 +237,17 @@ section .about-me__info--more-info .python {
   text-align: center;
   margin-inline: auto;
   color: #e67a1b;
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: 500;
 }
 
 .waiting {
   font-size: 2rem;
-  animation-name: rotate;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: linear;
+  margin-top: 1rem;
+  animation: 2s linear infinite normal both rotate;
 }
 
 @keyframes rotate {
@@ -254,13 +258,34 @@ section .about-me__info--more-info .python {
     transform: rotate(360deg);
   }
 }
-@media all and (max-width: 350px) {
+@media all and (max-width: 490px) {
   html {
     font-size: 13px;
   }
 
+  .bottom-shadow {
+    display: none;
+  }
+
   .quiz {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .welcome-text__subheading--quiz-subheading {
+    margin-top: 0.5rem;
+  }
+
+  .results {
+    padding: 0 1rem 2.4rem;
+  }
+
+  .result__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2.5rem;
   }
 }
 @media all and (min-width: 490px) {
@@ -439,7 +464,7 @@ a {
   cursor: pointer;
   background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
   border-radius: 15px;
-  box-shadow: 0px 4px 4px #60440b;
+  box-shadow: 0 4px 4px #60440b;
   font-weight: 700;
   font-size: 22px;
   color: white;

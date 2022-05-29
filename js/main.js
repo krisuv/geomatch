@@ -8,7 +8,7 @@ const resultSection = `
             <p class="welcome-text__subheading welcome-text__subheading--quiz-subheading">It seems you should be born
                 in...</p>
             <div class="result">
-                <h2 class="result__header">Poland!</h2>
+                <h2 class="result__header"></h2>
                 <p class="result__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut commodi
                     consectetur ea earum facilis ipsam laborum laudantium, natus necessitatibus neque odio optio quae
                     quam qui quia sapiente sint sit tempora ut! Autem beatae consectetur fugit iusto quae similique,
@@ -23,20 +23,10 @@ const resultSection = `
             </div>
         </div>
     </section>`
-   // document.querySelector('.results').innerHTML += resultSection
 
-const options = [...document.querySelectorAll('.question__option')]
-const quizSubheading = document.querySelector('.welcome-text__subheading--quiz-subheading')
 const quizForm = document.querySelector('.questions-form')
 const results = document.querySelector('.results')
 
-
-const showResult = () => {
-    const resultSection = document.querySelector('.results')
-    resultSection.innerHTML += resultSection
-}
-
-// all answers
 let allAnswers = []
 questions.forEach(question => {
     allAnswers.push(question.answers)
@@ -51,19 +41,7 @@ let questionId = 1
 
 generateRandomSubheading()
 
-
 const createQuestion = ({description, avatar, answers}) => {
-
-    const createQuestionTemplate = (avatar,description) => (
-        `<article class="question" id="fourth">
-              <span class = "question__icon">${avatar}</span>
-            <h3 class="question__title">${description}</h3>
-            <div class="question__answers">
-                
-            </div>
-          </article>`
-    )
-
 
     const question = document.createElement('article')
     question.setAttribute('id', `question${questionId}`)
@@ -106,9 +84,7 @@ const createQuestion = ({description, avatar, answers}) => {
     question.appendChild(questionTitle)
     question.appendChild(questionAnswers)
 
-    //const form = document.querySelector('form.questions-form')
     quizForm.appendChild(question)
-
 
 }
 
@@ -124,21 +100,16 @@ alertMessage.classList.add('alert-message')
 quizForm.appendChild(submitButton)
 quizForm.appendChild(alertMessage)
 
-// jest problem z totalResult- zawsze na początku ma wartośc true
-
 const countPoints = (checkedAnswers) => {
-
-    let xD = []
+    let filterAnswers = []
     allAnswers.filter( answer => {
         checkedAnswers.forEach( checkedAnswer => {
             if(answer.id === checkedAnswer){
-                xD.push(answer)
+                filterAnswers.push(answer)
             }
         })
     })
-    //console.log(xD)
-
-    xD.forEach( answer => {
+    filterAnswers.forEach( answer => {
         answer.countries.forEach(country => {
             country.points++
         })
@@ -154,13 +125,19 @@ const countPoints = (checkedAnswers) => {
     let winnerCountries = []
     winnerCountries = countries.filter(country => country.points === winnerCountry.points)
     winnerCountries.forEach(winner => console.log(winner))
+    return showResults(winnerCountries)
+}
 
-    //reset all points
-    //zamiast resetu można zablokować przyciski
-    //questionObjects.forEach(questionObject => questionObject.style.filter = `blur(6px)`)
-    //questionsAnswers.forEach(questionAnswer => questionAnswer.style.pointerEvents = `none`)
-
-    //console.log(winnerCountry)
+const showResults = (winnerCountries) => {
+    const resultHeaderCountries = []
+    winnerCountries.forEach((country) => {
+        const winnerCountryName = document.createElement('span')
+        winnerCountryName.textContent = `${country.name}`
+        winnerCountryName.style.color = country.color
+        resultHeaderCountries.push(winnerCountryName)
+        console.log(country.name)
+    })
+    return resultHeaderCountries
 }
 
 const checkRequiredAnswers = (event) => {
@@ -171,7 +148,7 @@ const checkRequiredAnswers = (event) => {
     questionsAnswers.forEach(answer => {
         const options = [...answer.querySelectorAll('.question__option')]
         const result = options.find(option => option.checked)
-        
+
         if(result){
             const answerId = (parseInt(result.id))
             checkedAnswers.push(answerId)
@@ -180,35 +157,47 @@ const checkRequiredAnswers = (event) => {
         }
     })
 
-    
+
     if(totalResult){
-        countPoints(checkedAnswers)
+
+        const winnerCountries = countPoints(checkedAnswers)
         console.log(countries)
+
+        submitButton.style.display = `none`
         alertMessage.textContent = `⚙️`
         alertMessage.classList.add('waiting')
-        results.innerHTML += resultSection
-        submitButton.style.display = `none`
+
+        const waitForResults = () => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    alertMessage.textContent = ``
+                    alertMessage.classList.remove('waiting')
+                    resolve()
+                }, 2000)
+            })
+        }
+
+        const gearWheelAnimation = (async () => {
+            await waitForResults()
+            results.innerHTML += resultSection
+            results.style.minHeight = `60vh`
+
+            const resultHeader = document.querySelector('.result__header')
+            winnerCountries.forEach(country =>  resultHeader.appendChild(country))
+        })()
+
+
+
     } else {
-        console.warn(`You must have forgotten to check the answer in one of the questions 🧿`)
-        alertMessage.textContent = `You must have forgotten to check the answer in one of the questions 🧿`
-        setTimeout(() => {alertMessage.textContent = ``},2000)
+        alertMessage.textContent = `Answer every question!`
     }
 
 }
 
-const unblockButtons = () => {
-
-    questionObjects.forEach(questionObject => questionObject.style.filter = `blur(6px)`)
-    questionsAnswers.forEach(questionAnswer => questionAnswer.style.pointerEvents = `none`)
-
-    // questionObjects.forEach((questionObject,index) => {
-    //     if(questionObject)
-    //         })
+const blockButtons = () => {
+    questionObjects.slice(1).forEach(questionObject => questionObject.style.filter = `blur(4px)`)
+    questionsAnswers.slice(1).forEach(questionAnswer => questionAnswer.style.pointerEvents = `none`)
 }
-
-// questionObjects.slice(1).forEach(questionObject => questionObject.style.filter = `blur(6px)`)
-// questionsAnswers.slice(1).forEach(questionAnswer => questionAnswer.style.pointerEvents = `none`)
-
 
 const unblockButton = (index) => {
     if(index < questionObjects.length){
@@ -231,8 +220,7 @@ const activateQuestions = () => {
 
 const questionObjects = [...document.querySelectorAll('.question')]
 const questionsAnswers = [...document.querySelectorAll('.question__answers')]
-questionObjects.slice(1).forEach(questionObject => questionObject.style.filter = `blur(4px)`)
-questionsAnswers.slice(1).forEach(questionAnswer => questionAnswer.style.pointerEvents = `none`)
 submitButton.addEventListener('click', checkRequiredAnswers)
 questionsAnswers.forEach(questionsAnswer => questionsAnswer.addEventListener('click', activateQuestions))
+blockButtons()
 console.log(questionsAnswers)

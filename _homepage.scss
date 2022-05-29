@@ -46,9 +46,6 @@
 
 .short-info{
   @include flex(column, space-around);
-  //justify-content: space-around;
-  //gap: 1.5rem;
-  //flex-grow: 1;
   line-height: 1.8rem;
 
   &__paragraph{
