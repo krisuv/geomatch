@@ -1,15 +1,15 @@
-@import "./variables.scss";
-@import "./homepage.scss";
-@import "./sections.scss";
-@import "./footer.scss";
-@import "./quiz.scss";
-@import "./result.scss";
-@import "./media.scss";
+@import "variables";
+@import "homepage";
+@import "sections";
+@import "footer";
+@import "quiz";
+@import "result";
+@import "media";
 
 @font-face {
   //Free download fonts at http://sharefonts.net
   font-family: 'rockwell';
-  src: url(fonts/rockb.ttf);
+  src: url(../fonts/rockb.ttf);
   font-style: normal;
   font-weight: 700;
 }

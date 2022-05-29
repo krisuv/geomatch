@@ -1,6 +1,6 @@
 .homepage {
   min-height: 100vh;
-  background: url("img/spaceStars.jpg") no-repeat;
+  background: url("../img/spaceStars.jpg") no-repeat;
   background-size: cover;
   object-fit: cover;
   color: white;
@@ -399,7 +399,7 @@ section.about-me {
 }
 @font-face {
   font-family: "rockwell";
-  src: url(fonts/rockb.ttf);
+  src: url(../fonts/rockb.ttf);
   font-style: normal;
   font-weight: 700;
 }
