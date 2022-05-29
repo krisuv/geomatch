@@ -1,7 +1,7 @@
 @import "variables";
 
-@media all and (max-width: 490px) {
-  html{
+@media (max-width: 490px) {
+  html {
     font-size: 13px;
   }
 
@@ -14,40 +14,40 @@
   }
 
   .welcome-text__subheading--quiz-subheading {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   .results {
     padding: 0 1rem 2.4rem;
   }
-
-  .result__header {
-    @include flex(column, space-evenly, 2.5rem);
-  }
-
 }
 
-@media all and (min-width: 490px) {
+@media (min-width: 490px) {
   .question__answers {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-height: 1000px){
-  .short-info{
+@media (min-height: 1000px) {
+  .short-info {
     justify-content: center;
     gap: 3rem;
     margin: 3rem 0;
   }
-
 }
 
-@media (min-width: 800px),(min-height: 1200px) {
-  html{
+@media (max-width: 800px) {
+  .result__header {
+    @include flex(column, space-evenly, 2.5rem);
+  }
+}
+
+@media (min-width: 800px), (min-height: 1200px) {
+  html {
     font-size: 16px;
   }
 
-  .planet-image{
+  .planet-image {
     top: 30px;
     left: 80%;
   }
@@ -56,10 +56,10 @@
     align-self: flex-start;
   }
 
-  .welcome-text__header{
+  .welcome-text__header {
     font-size: 6rem;
   }
-  .welcome-text__subheading{
+  .welcome-text__subheading {
     margin-top: 1.5rem;
   }
 
@@ -67,12 +67,12 @@
     text-align: left;
   }
 
-  .short-info{
+  .short-info {
     max-width: 50vw;
   }
 
   .footer__socials,
-  .footer__copyright{
+  .footer__copyright {
     @include centerText();
   }
 
@@ -87,31 +87,30 @@
 
   h1,
   h2 {
-    @include centerText(left,0);
+    @include centerText(left, 0);
   }
 
   .welcome-text {
-    &__header--quiz-header{
-      @include  centerText(center,auto);
+    &__header--quiz-header {
+      @include centerText(center, auto);
     }
-    &__subheading--quiz-subheading{
+    &__subheading--quiz-subheading {
       margin-top: 3rem;
     }
   }
 
   .result {
-    &__info{
+    &__info {
       margin-inline: 25vw;
     }
-    .buttons{
-      @include flex(row,space-between,3rem);
+    .buttons {
+      @include flex(row, space-between, 3rem);
     }
   }
-
 }
 
 @media (min-width: 1200px) {
-  html{
+  html {
     font-size: 18px;
   }
 
@@ -127,11 +126,11 @@
   .question__label,
   .button--play,
   .button--quiz {
-    transition: ease-in .1s;
+    transition: ease-in 0.1s;
   }
   .question__label:hover,
   .button--play:hover,
   .button--quiz:hover {
-    transform: scale(.97);
+    transform: scale(0.97);
   }
 }

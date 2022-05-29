@@ -10,26 +10,25 @@ section {
       list-style-position: inside;
       line-height: 170%;
     }
-    &__paragraph{
-      padding-top: .8rem;
+    &__paragraph {
+      padding-top: 0.8rem;
       text-align: justify;
     }
   }
-  .about-me{
+  .about-me {
     margin-bottom: 2rem;
     &__info {
-
-      &--more-info{
+      &--more-info {
         font-weight: 500;
         text-align: left;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
 
-        .csharp{
+        .csharp {
           color: green;
           font-weight: 600;
         }
-        .python{
-          color:royalblue;
+        .python {
+          color: royalblue;
           font-weight: 600;
         }
       }

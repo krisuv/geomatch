@@ -48,7 +48,7 @@
 }
 
 .planet-image {
-  width: clamp(260px, 35vw ,800px);
+  width: clamp(260px, 35vw, 800px);
   position: absolute;
   top: 36px;
   left: 50%;
@@ -126,7 +126,7 @@ section .about-me__info--more-info .python {
   gap: 0;
   position: relative;
   margin: 3rem auto 1rem;
-  width: clamp(250px,70vw,560px);
+  width: clamp(250px, 70vw, 560px);
   background: radial-gradient(100% 100% at 24.22% 0%, rgba(163, 177, 236, 0.7) 0%, rgba(163, 177, 236, 0.1) 100%);
   border: 1px solid rgba(163, 177, 236, 0.3);
   backdrop-filter: blur(25px);
@@ -258,7 +258,7 @@ section .about-me__info--more-info .python {
     transform: rotate(360deg);
   }
 }
-@media all and (max-width: 490px) {
+@media (max-width: 490px) {
   html {
     font-size: 13px;
   }
@@ -278,17 +278,8 @@ section .about-me__info--more-info .python {
   .results {
     padding: 0 1rem 2.4rem;
   }
-
-  .result__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 2.5rem;
-  }
 }
-@media all and (min-width: 490px) {
+@media (min-width: 490px) {
   .question__answers {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -298,6 +289,16 @@ section .about-me__info--more-info .python {
     justify-content: center;
     gap: 3rem;
     margin: 3rem 0;
+  }
+}
+@media (max-width: 800px) {
+  .result__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2.5rem;
   }
 }
 @media (min-width: 800px), (min-height: 1200px) {
@@ -417,7 +418,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(116.82deg, #010509 0%, #050A28 65.27%, #060E3D 100%);
+  background: linear-gradient(116.82deg, #010509 0%, #050a28 65.27%, #060e3d 100%);
   color: #eee;
   position: relative;
   font-family: "montserrat", sans-serif;

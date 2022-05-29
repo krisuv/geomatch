@@ -8,7 +8,7 @@
 
 @font-face {
   //Free download fonts at http://sharefonts.net
-  font-family: 'rockwell';
+  font-family: "rockwell";
   src: url(../fonts/rockb.ttf);
   font-style: normal;
   font-weight: 700;
@@ -31,7 +31,7 @@ body {
   background: $spaceBackgroundSecondary;
   color: $light;
   position: relative;
-  font-family: 'montserrat',sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 
 .homepage,
@@ -42,7 +42,7 @@ body {
 
 .about-quiz,
 .about-me {
- min-height: 50vh;
+  min-height: 50vh;
 }
 
 h1,
@@ -59,10 +59,10 @@ h2 {
 }
 
 h3 {
-  padding-bottom: .8rem;
+  padding-bottom: 0.8rem;
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
@@ -72,11 +72,11 @@ a{
   height: 41px;
   border: none;
   cursor: pointer;
-  background:$buttonBackground;
+  background: $buttonBackground;
   border-radius: 15px;
   box-shadow: 0 4px 4px $buttonShadow;
 
-  font-weight:700;
+  font-weight: 700;
   font-size: 22px;
   color: white;
 
@@ -90,5 +90,25 @@ a{
   bottom: 0;
   z-index: 10;
   pointer-events: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, .01)), color-stop(15.5%, rgba(1, 5, 9, .047)), color-stop(22.5%, rgba(1, 5, 9, .106)), color-stop(29%, rgba(1, 5, 9, .176)), color-stop(35.3%, rgba(1, 5, 9, .26)), color-stop(41.2%, rgba(1, 5, 9, .353)), color-stop(47.1%, rgba(1, 5, 9, .45)), color-stop(52.9%, rgba(1, 5, 9, .55)), color-stop(58.8%, rgba(1, 5, 9, .647)), color-stop(64.7%, rgba(1, 5, 9, .74)), color-stop(71%, rgba(1, 5, 9, .824)), color-stop(77.5%, rgba(1, 5, 9, .894)), color-stop(84.5%, rgba(1, 5, 9, .953)), color-stop(91.9%, rgba(1, 5, 9, .99)),to(rgb(1,5,9)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(1, 5, 9, 0)),
+    color-stop(8.1%, rgba(1, 5, 9, 0.01)),
+    color-stop(15.5%, rgba(1, 5, 9, 0.047)),
+    color-stop(22.5%, rgba(1, 5, 9, 0.106)),
+    color-stop(29%, rgba(1, 5, 9, 0.176)),
+    color-stop(35.3%, rgba(1, 5, 9, 0.26)),
+    color-stop(41.2%, rgba(1, 5, 9, 0.353)),
+    color-stop(47.1%, rgba(1, 5, 9, 0.45)),
+    color-stop(52.9%, rgba(1, 5, 9, 0.55)),
+    color-stop(58.8%, rgba(1, 5, 9, 0.647)),
+    color-stop(64.7%, rgba(1, 5, 9, 0.74)),
+    color-stop(71%, rgba(1, 5, 9, 0.824)),
+    color-stop(77.5%, rgba(1, 5, 9, 0.894)),
+    color-stop(84.5%, rgba(1, 5, 9, 0.953)),
+    color-stop(91.9%, rgba(1, 5, 9, 0.99)),
+    to(rgb(1, 5, 9))
+  );
 }

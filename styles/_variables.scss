@@ -1,17 +1,31 @@
 $primary: #e5c12d;
-$secondary: rgb(229,193,45);
-$third: rgb(230,122,27);
+$secondary: rgb(229, 193, 45);
+$third: rgb(230, 122, 27);
 $light: #eee;
-$spaceBackgroundPrimary: linear-gradient(116.82deg, #07111A 0%, #0C154A 77.12%, #0F1C68 100%);
-$spaceBackgroundSecondary: linear-gradient(116.82deg, #010509 0%, #050A28 65.27%, #060E3D 100%);
+$spaceBackgroundPrimary: linear-gradient(
+  116.82deg,
+  #07111a 0%,
+  #0c154a 77.12%,
+  #0f1c68 100%
+);
+$spaceBackgroundSecondary: linear-gradient(
+  116.82deg,
+  #010509 0%,
+  #050a28 65.27%,
+  #060e3d 100%
+);
 
 $subheadingMargin: 13rem;
 
 $buttonBackground: linear-gradient(135deg, $secondary 0%, $third 100%);
-$activeOption: linear-gradient(140deg, rgba(177,224,25,0.9) 0%, rgba(27,230,197,0.3) 100%);
+$activeOption: linear-gradient(
+  140deg,
+  rgba(177, 224, 25, 0.9) 0%,
+  rgba(27, 230, 197, 0.3) 100%
+);
 $buttonShadow: rgb(96, 68, 11);
 
-$textXSmall: .9rem;
+$textXSmall: 0.9rem;
 $textSmall: 1rem;
 $textSM: 1.2rem;
 $textMedium: 1.5rem;
@@ -20,7 +34,7 @@ $textXLarge: 2.5rem;
 $textXXLarge: 3rem;
 $text3XLarge: 3.5rem;
 
-@mixin flex($flexDirection: row, $justifyContent: center, $gap: 1.5rem){
+@mixin flex($flexDirection: row, $justifyContent: center, $gap: 1.5rem) {
   display: flex;
   align-items: center;
   justify-content: $justifyContent;

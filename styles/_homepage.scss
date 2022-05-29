@@ -1,6 +1,6 @@
 @import "variables";
 
-.homepage{
+.homepage {
   min-height: 100vh;
   background: url("../img/spaceStars.jpg") no-repeat;
   background-size: cover;
@@ -12,12 +12,12 @@
 }
 
 .welcome-text,
-.short-info{
+.short-info {
   position: relative;
   z-index: 1;
 }
 
-.welcome-text{
+.welcome-text {
   &__header {
     font-size: $text3XLarge;
   }
@@ -31,30 +31,29 @@
     }
   }
 
-  &__subheading{
+  &__subheading {
     font-size: $textMedium;
     color: $primary;
     margin-top: $subheadingMargin;
     text-align: center;
   }
 
-  &__city{
+  &__city {
     font-weight: 700;
   }
-
 }
 
-.short-info{
+.short-info {
   @include flex(column, space-around);
   line-height: 1.8rem;
 
-  &__paragraph{
+  &__paragraph {
     font-size: 1.3rem;
   }
 }
 
-.planet-image{
-  width: clamp(260px, 35vw ,800px);
+.planet-image {
+  width: clamp(260px, 35vw, 800px);
   position: absolute;
   top: 36px;
   left: 50%;

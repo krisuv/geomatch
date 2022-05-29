@@ -1,21 +1,20 @@
 @import "variables";
 
-.footer{
-  padding: .5rem 2rem;
+.footer {
+  padding: 0.5rem 2rem;
   background-color: $primary;
   position: relative;
   z-index: 20;
 
-  &__copyright{
+  &__copyright {
     font-weight: 700;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 15px;
     color: black;
   }
 
-  &__link{
+  &__link {
     width: 2.5rem;
     height: 2.5rem;
   }
-
 }
