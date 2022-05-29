@@ -168,9 +168,9 @@ section .about-me__info--more-info .python {
   font-size: 1rem;
   border-radius: 5px;
   padding: 0.3rem 0.8rem;
-  background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
+  background: linear-gradient(135deg, rgb(229, 193, 45) 0%, rgb(230, 122, 27) 100%);
   color: black;
-  box-shadow: 0 4px 4px #60440b;
+  box-shadow: 0 4px 4px rgb(96, 68, 11);
   min-height: 25px;
   line-height: initial;
   word-wrap: break-word;
@@ -236,7 +236,7 @@ section .about-me__info--more-info .python {
 .alert-message {
   text-align: center;
   margin-inline: auto;
-  color: #e67a1b;
+  color: rgb(230, 122, 27);
   font-size: 1rem;
   position: absolute;
   left: 50%;
@@ -463,9 +463,9 @@ a {
   height: 41px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #e5c12d 0%, #e67a1b 100%);
+  background: linear-gradient(135deg, rgb(229, 193, 45) 0%, rgb(230, 122, 27) 100%);
   border-radius: 15px;
-  box-shadow: 0 4px 4px #60440b;
+  box-shadow: 0 4px 4px rgb(96, 68, 11);
   font-weight: 700;
   font-size: 22px;
   color: white;
@@ -479,7 +479,7 @@ a {
   bottom: 0;
   z-index: 10;
   pointer-events: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, 0.01)), color-stop(15.5%, rgba(1, 5, 9, 0.047)), color-stop(22.5%, rgba(1, 5, 9, 0.106)), color-stop(29%, rgba(1, 5, 9, 0.176)), color-stop(35.3%, rgba(1, 5, 9, 0.26)), color-stop(41.2%, rgba(1, 5, 9, 0.353)), color-stop(47.1%, rgba(1, 5, 9, 0.45)), color-stop(52.9%, rgba(1, 5, 9, 0.55)), color-stop(58.8%, rgba(1, 5, 9, 0.647)), color-stop(64.7%, rgba(1, 5, 9, 0.74)), color-stop(71%, rgba(1, 5, 9, 0.824)), color-stop(77.5%, rgba(1, 5, 9, 0.894)), color-stop(84.5%, rgba(1, 5, 9, 0.953)), color-stop(91.9%, rgba(1, 5, 9, 0.99)), to(#010509));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 5, 9, 0)), color-stop(8.1%, rgba(1, 5, 9, 0.01)), color-stop(15.5%, rgba(1, 5, 9, 0.047)), color-stop(22.5%, rgba(1, 5, 9, 0.106)), color-stop(29%, rgba(1, 5, 9, 0.176)), color-stop(35.3%, rgba(1, 5, 9, 0.26)), color-stop(41.2%, rgba(1, 5, 9, 0.353)), color-stop(47.1%, rgba(1, 5, 9, 0.45)), color-stop(52.9%, rgba(1, 5, 9, 0.55)), color-stop(58.8%, rgba(1, 5, 9, 0.647)), color-stop(64.7%, rgba(1, 5, 9, 0.74)), color-stop(71%, rgba(1, 5, 9, 0.824)), color-stop(77.5%, rgba(1, 5, 9, 0.894)), color-stop(84.5%, rgba(1, 5, 9, 0.953)), color-stop(91.9%, rgba(1, 5, 9, 0.99)), to(rgb(1, 5, 9)));
 }
 
 /*# sourceMappingURL=style.css.map */
