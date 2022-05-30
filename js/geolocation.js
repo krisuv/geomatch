@@ -32,7 +32,7 @@ if (!savedCity) {
     });
   }
 } else {
-  userCity.textContent = savedCity;
+  userCity.textContent = savedCity || "somewhere";
 }
 
 const findCity = ({ latitude, longitude }) => {
@@ -49,7 +49,7 @@ const findCity = ({ latitude, longitude }) => {
     })
     .then((data) => {
       console.log(data.address);
-      savedCity = data.address.city;
+      savedCity = data.address?.city || "somewhere";
       localStorage.setItem("city", savedCity);
       userCity.textContent = savedCity;
     })

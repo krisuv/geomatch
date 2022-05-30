@@ -491,7 +491,7 @@ const Question19 = new Question(
 );
 
 const Question20 = new Question(
-  "How can be your character described in one world?",
+  "How can be your character described in one word?",
   "🤔",
   new Answer("depressive", poland, uk, japan, russia, finland),
   new Answer(
