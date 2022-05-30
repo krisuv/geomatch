@@ -16,9 +16,11 @@ Each question has 3 parameters:
 1. description
 2. avatar
 3. answers
+
 Descriptions are just string parameters. The answers however, are the instances of Answer class which has its own parameters:
 * name
 * and countries
+
 The number of answers(and countries in every answer) is not restricted- I used rest operator to allow undifined number of them: 
 ```javascript
 class Question {
