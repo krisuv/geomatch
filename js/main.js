@@ -6,6 +6,7 @@ import {
   generateSubmitButton,
 } from "./createQuestions.js";
 import { generateRandomSubheading } from "./randomText.js";
+import { scrollToNextQuestion } from "./scroll.js";
 
 const results = document.querySelector(".results");
 
@@ -141,8 +142,10 @@ const activateQuestions = () => {
 
 const questionObjects = [...document.querySelectorAll(".question")];
 const questionsAnswers = [...document.querySelectorAll(".question__answers")];
+const options = [...document.querySelectorAll(".question__option")];
 submitButton.addEventListener("click", checkRequiredAnswers);
 questionsAnswers.forEach((questionsAnswer) =>
   questionsAnswer.addEventListener("click", activateQuestions)
 );
+scrollToNextQuestion(options, questionObjects);
 blockButtons();

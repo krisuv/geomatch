@@ -5,7 +5,8 @@ export const resultSection = `
                 in...</p>
             <div class="result">
                 <h2 class="result__header"></h2>
-                <p class="result__info">Really awesome country! Maybe it's final time to think about your vacation there. Anyways, treat your choise with a grain of salt- answers don't actually fit the truth and most of them are based on stereotypes. But as you found yourself here, please get to know about this country, even for one minute. Maybe you will find out something interesting today!</p>
+                <p class="result__info">Really awesome country! Maybe it's final time to think about your vacation there. Anyways, treat your choise with a grain of salt- answers don't actually fit the truth and most of them are based on stereotypes. But as you found yourself here, please get to know about this country, even for one minute. Maybe you will find out something interesting today!
+                <br/>(INSTEAD OF THIS TEMPLATE DESCRIPTION THERE WILL BE AN API WITH DATA ABOUT THE COUNTRY HERE IN THE FUTURE)</p>
 
                 <div class="buttons">
                     <a class="quiz-link" href="./quiz.html"><button class="button button--play"
@@ -24,7 +25,8 @@ export const resultSectionExtended = `
                 in...</p>
             <div class="result">
                 <h2 class="result__header"></h2>
-                <p class="result__info">Really awesome countries! All of them received same number of points. Maybe it's final time to think about your vacation in one of these. Anyways, treat your choise with a grain of salt- answers don't actually fit the truth and most of them are based on stereotypes. But as you found yourself here, please get to know about these countries, even for a moment. Maybe you will find out something interesting today!</p>
+                <p class="result__info">Really awesome countries! All of them received same number of points. Maybe it's final time to think about your vacation in one of these. Anyways, treat your choise with a grain of salt- answers don't actually fit the truth and most of them are based on stereotypes. But as you found yourself here, please get to know about these countries, even for a moment. Maybe you will find out something interesting today!<br/>
+                (INSTEAD OF THIS TEMPLATE DESCRIPTION THERE WILL BE AN API WITH DATA ABOUT THE COUNTRIES HERE IN THE FUTURE)</p>
 
                 <div class="buttons">
                     <a class="quiz-link" href="./quiz.html"><button class="button button--play"

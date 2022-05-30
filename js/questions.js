@@ -253,7 +253,7 @@ const Question10 = new Question(
 
 const Question11 = new Question(
   "I like people who are:",
-  "🧍🏾‍♂️🧍🏽‍♀️🧍🏼",
+  "🥳",
   new Answer(
     "crazy and loud",
     israel,
@@ -283,7 +283,7 @@ const Question11 = new Question(
 );
 
 const Question12 = new Question(
-  "For my earnings I can:",
+  "For my salary I can:",
   "💸",
   new Answer(
     "rent an apartment",
@@ -298,9 +298,9 @@ const Question12 = new Question(
     japan,
     italy
   ),
-  new Answer("buy myself new shoes", czechia, poland, greece, china),
+  new Answer("rent a room", czechia, poland, greece, china),
   new Answer(
-    "eat big brand chocolate",
+    "rent a bed in a room",
     mexico,
     uganda,
     egypt,
