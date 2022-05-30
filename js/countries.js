@@ -42,7 +42,7 @@ const colors = [
   "olive",
   "lightseagreen",
   "goldenrod",
-  "black",
+  "sienna",
   "honeydew",
   "yellowgreen",
   "orange",

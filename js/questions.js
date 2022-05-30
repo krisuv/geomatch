@@ -509,6 +509,25 @@ const Question20 = new Question(
   new Answer("euphoric", uganda, indonesia, brazil, canada, uae, australia, usa)
 );
 
+const Question21 = new Question(
+    "Are you good at dancing?",
+    "💃",
+    new Answer("yes", greece, israel, mexico, uae, uganda, indonesia, brazil, japan, russia, india, usa),
+    new Answer(
+        "no",
+        egypt,
+        china,
+        italy,
+        germany,
+        canada,
+        australia,
+        finland,
+        uk,
+        poland,
+        czechia
+    )
+);
+
 export const questions = [
   Question1,
   Question2,
@@ -530,4 +549,5 @@ export const questions = [
   Question18,
   Question19,
   Question20,
+  Question21
 ];
