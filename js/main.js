@@ -80,6 +80,12 @@ const checkRequiredAnswers = (event) => {
   if (totalResult) {
     const winnerCountries = countPoints(checkedAnswers);
 
+    const blockButtonsAfterSubmit = (() => {
+      questionsAnswers.forEach(
+        (questionAnswer) => (questionAnswer.style.pointerEvents = `none`)
+      );
+    })();
+
     submitButton.style.display = `none`;
     alertMessage.textContent = `⚙️`;
     alertMessage.classList.add("waiting");
